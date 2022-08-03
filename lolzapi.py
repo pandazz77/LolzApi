@@ -149,11 +149,13 @@ class LolzteamApi:
 
         return self.session.post(self.baseUrl + f'market/item/add', data)
 
-    def market_add_item_check(self, item: int, login: str=None, password: str=None, loginpassword: str=None, close_item: bool=None):
+    def market_add_item_check(self, item: int, login: str=None, password: str=None, loginpassword: str=None, close_item: bool=None,, cookies: str=None, cookie_login: int=None):
         data = {}
         if login: data['login'] = login
         if password: data['password'] = password
         if loginpassword: data['loginpassword'] = loginpassword
+        if cookies: data["extra[cookies]"] = cookies
+        if cookie_login: data["extra[cookie_login]"] = cookie_
         if close_item: data['close_item'] = close_item
 
         return self.session.post(self.baseUrl + f'market/{item}/goods/check', data)
