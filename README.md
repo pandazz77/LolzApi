@@ -106,6 +106,8 @@ ____
  * `login` - логин аккаунта
  * `password` - пароль аккаунта
  * `loginpassword` - данные от аккаунта в формате `login:password`
+ * `cookies` - добавить куки к товару
+ * `cookie_login` - вход только по кукам (1-да)
  * `close_item` - закрыть товар
 ____
 ### market_get_email
